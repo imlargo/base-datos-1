@@ -14,14 +14,6 @@ create table Productos(
 	descripcion nvarchar(300)
 );
 
-CREATE TABLE Ventas (
-    id_venta SERIAL PRIMARY KEY,
-    id_cliente INT REFERENCES Clientes(id_cliente),
-    id_producto INT REFERENCES Productos(id_producto),
-    fecha_venta DATE,
-    cantidad_vendida INT
-);
-
 create table Ventas(
 	id_venta int primary key,
 	id_cliente int not null,
