@@ -19,7 +19,7 @@ create table Ventas(
 	id_cliente int not null,
 	id_producto int not null,
 	fecha_venta date not null,
-    cantidad_vendida int not null,
+	cantidad int not null,
 	constraint cfV_clientes foreign key (id_cliente) references Clientes(id_cliente),
-	constraint cfV_prodectos foreign key (id_producto) references Productos(id_producto)
+	constraint cfV_productos foreign key (id_producto) references Productos(id_producto)
 );

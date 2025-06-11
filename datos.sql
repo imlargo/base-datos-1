@@ -1,3 +1,15 @@
+﻿insert into Clientes(id_cliente, nombre, documento, email, edad) values
+(1,'Seokjin Kim','12345678','worldwidehandsome@gmail.com',33),
+(2,'Yoongi Min','13456889','agustd03@gmail.com',32),
+(3,'Hoseok Jung','4355209','imrhope@gmail.com',31),
+(4,'Namjoon Kim','16705188','rchive@gmail.com',31),
+(5,'Jimin Park','1000559134','jiminie13@gmail.com',30),
+(6,'Taehyung Kim','15632478','tete123@gmail.com',30),
+(7,'Jungkook Jung','1000789335','kookie09@hotmail.com',28),
+(8,'Maria Alejandra Muñoz','1000557085','mamunozgo@unal.edu.co',22),
+(9,'Paula Andrea Suarez','113489007','pasuarezgu@unal.edu.co',20),
+(10,'Juan Carlos Largo','112378946','jlargob@unal.edu.co',19);
+
 insert into Productos(id_producto, nombre_producto, precio, cantidad, descripcion) values
 (1, 'album Map of the Soul: 7', 400000, 7, 'Map of the Soul: 7 es el cuarto álbum de estudio del grupo surcoreano BTS. Fue lanzado el 21 de febrero de 2020 por Big Hit Entertainment en cuatro versiones diferentes.'),
 (2, 'album BE', 350000, 20, 'BE es el quinto álbum de estudio del grupo surcoreano BTS. Fue lanzado el 20 de noviembre de 2020 a través de Big Hit y Columbia Records.'),
@@ -19,3 +31,24 @@ insert into Productos(id_producto, nombre_producto, precio, cantidad, descripcio
 (18, 'pin con leyenda "Soy Army"', 15000, 30, null),
 (19, 'album The Most Beautiful Moment in Life: Part 1', 200000, 4, 'The Most Beautiful Moment in Life, Part 1 es el tercer EP del grupo surcoreano BTS. El EP fue publicado el 29 de abril de 2015​ y es primer álbum del proyecto de dos partes del grupo que se centra en la "Youth".​'),
 (20, 'album BTS, The Best', 460000, 1, 'BTS, the Best es el tercer álbum recopilatorio en japonés del grupo surcoreano BTS, lanzado el 16 de junio de 2021 por Universal Music Japan.​');
+
+insert into Ventas(id_venta, id_cliente, id_producto, fecha_venta, cantidad) values
+( 1, 1,  2, '2024-05-10', 1),
+( 2, 4,  1, '2024-03-12', 2),
+( 3, 7,  5, '2023-05-13', 3),
+( 4, 2,  3, '2025-01-15', 7),
+( 5, 9,  8, '2020-03-18', 5),
+( 6,10, 17, '2025-02-20', 2),
+( 7, 5,  7, '2021-12-24', 4),
+( 8, 3,  4, '2023-05-22', 2),
+( 9, 6, 12, '2025-04-23', 12),
+(10, 8, 16, '2024-02-24', 2),
+(11, 1, 11, '2023-08-02', 8),
+(12, 2, 14, '2022-07-16', 7),
+(13, 4, 20, '2025-05-27', 1),
+(14, 3, 19, '2025-06-01', 1),
+(15, 7, 10, '2025-03-30', 3);
+
+select * from Clientes;
+select * from Productos;
+select * from Ventas;
