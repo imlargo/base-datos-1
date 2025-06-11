@@ -21,35 +21,13 @@ JOIN Clientes c ON v.id_cliente = c.id_cliente;
 -- 7. Liste el nombre del producto y su descripción para todos los productos con inventario menor o igual a 5
 SELECT nombre_producto, descripcion FROM Productos WHERE cantidad <= 5;
 
-
-
--- Consultas adicionales
--- 8. Clientes con edad igual a 25
-SELECT * FROM Clientes WHERE edad = 25;
-
--- 9. Productos con precio diferente de 50000
-SELECT * FROM Productos WHERE precio <> 50000;
-
--- 10. Productos con cantidad menor a 20
-SELECT * FROM Productos WHERE cantidad < 20;
-
--- 11. Productos con cantidad mayor a 100
-SELECT * FROM Productos WHERE cantidad > 100;
-
--- 12. Ventas realizadas en o antes del 1 de enero de 2024
-SELECT * FROM Ventas WHERE fecha_venta <= '2024-01-01';
-
--- 13. Ventas realizadas después del 1 de enero de 2024
-SELECT * FROM Ventas WHERE fecha_venta > '2024-01-01';
-
--- 14. Clientes cuya edad no es 40
-SELECT * FROM Clientes WHERE edad <> 40;
-
--- 15. Productos con precio mayor o igual a 75000
-SELECT * FROM Productos WHERE precio >= 75000;
-
--- 16. Productos con precio menor o igual a 25000
-SELECT * FROM Productos WHERE precio <= 25000;
-
--- 17. Clientes con nombre igual a 'Juan Perez'
-SELECT * FROM Clientes WHERE nombre = 'Juan Perez';
+select id_cliente, nombre, documento from Clientes where edad >= 25;
+select id_producto, nombre_producto, precio from Productos where cantidad <> 0;
+select id_cliente, fecha_venta from Ventas where cantidad < 5;
+select id_producto, cantidad from Ventas where fecha_venta ='2025-05-27';
+select documento from Clientes where edad <> 30;
+select nombre_producto, precio from Productos where precio <= 200000;
+select id_producto, cantidad, precio from Productos where nombre_producto = 'album Dark & Wild';
+select email from Clientes where id_cliente < 5;
+select nombre_producto, descripcion from Productos where cantidad > 15;
+select * from Ventas where cantidad > 10;
